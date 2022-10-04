@@ -1,0 +1,109 @@
+.categories_container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* gap: 1rem; */
+}
+#about{
+    background: var(--color-bg1);
+    height: 37rem;
+
+}
+.cat-right{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.2rem;
+}
+.cat-right-card:nth-child(2) .icons{
+    background-color: var(--color-danger);
+}
+.cat-right-card:nth-child(3) .icons{
+    background-color: var(--color-success);
+}
+.cat-right-card:nth-child(4) .icons{
+    background-color: var(--color-warning);
+}
+.cat-right-card:nth-child(5) .icons{
+    background-color: var(--color-success);
+}
+/* .cat-right-card:nth-child(6) .icons{
+    background-color: var(--color-primary);
+} */
+
+.cat-right-card{
+    padding: 2rem;
+    border-radius: .6rem;
+    background: var(--color-bg2);
+    transform: var(--transition);
+}
+.cat-right-card:hover{
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+
+}
+.cat-left p{
+    margin: 1rem 0 3rem;
+}
+.cat-left {
+    margin-right: 4rem;
+}
+.cat-right-card .icons{
+    font-size: 3rem;
+    padding: 0.3rem;
+    background-color: var(--color-primary);
+    border-radius: 0.9rem;
+    color:var(--color-white);
+    border: 0.02rem solid var(--color-success);
+    transition: var(--transition);
+} 
+.cat-right-card .icons:hover{
+    background-color: transparent;
+    border-color: aqua;
+    cursor: pointer;
+    transform: translateY(-0.3rem);
+
+}
+.cat-right-card  h5{
+    margin: 2rem 0 0.7rem;
+    text-transform: capitalize;
+}
+
+.cat-right-card  p{
+    font-size: 0.85rem;
+}
+
+/*============================= Media Queries for Mediam Screen =============================== */
+
+@media screen AND (max-width:1120px) {
+    .container{
+        width: var(--container-width-md);
+    }
+    .categories_container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+  
+    .cat-right{
+        grid-template-columns: 1fr 1fr;
+        margin-top: 5rem;
+    }
+    #about{
+        background: var(--color-bg1);
+        height: auto;
+    
+    }
+
+    
+}
+
+/*============================= Media Queries for Small Screen ==================================== */
+@media screen AND (max-width:600px) {
+    .container{
+        width: var(--container-width-sm);
+    }
+    .cat-right{
+        grid-template-columns: 1fr;
+        /* margin-top: 5rem; */
+    }
+    
+    
+}

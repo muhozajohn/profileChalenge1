@@ -1,0 +1,155 @@
+/* =============================== NavBar =========================== */
+
+nav{
+    background: transparent;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+*{
+    user-select: none;
+}
+/* =================== Changing Nav on JavaScript =============== */
+.window-scroll{
+    background: var(--color-primary);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+.nav_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+nav button{
+    display: none;
+}
+ul{
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+ul li a span{
+    color: var(--color-white);
+    font-size: 1rem;
+    margin: 0.4rem;
+    align-items: center;
+}
+ul a{
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+ul a:hover{
+    color: var(--color-bg2);
+    
+}
+ul span{
+    display: none;
+
+}
+.bg-color{
+    background: var(--color-success);
+}
+
+
+
+/*============================= Media Queries for Mediam Screen =============================== */
+
+@media screen AND (max-width:1024px) {
+    .container{
+        width: var(--container-width-md);
+    }
+
+    .show-nav{
+        display: flex;
+    }
+    .hide-nav{
+        display: none;
+    }
+    
+   nav button{
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor: pointer;
+   }
+
+   nav ul{
+    position: absolute;
+    top: 80%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 6rem;
+    gap: 0;
+    width: 400px;
+    perspective: 300px;
+}
+nav ul li{
+    width: 100%;
+    height: 3.8rem;
+    /* animation: NavAnimation 1s ease forwards; */
+    animation: navAnimation 600ms ease forwards;
+    transform: rotateX(90deg);
+    opacity: 0;
+    transform-origin: top;
+}
+ul li a{
+    background: var(--color-primary);
+    box-shadow: -4rem 6rem 10rem rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    border-bottom: 1px solid var(--color-success);
+    place-items: center;
+    }
+    ul li:nth-child(2){
+        animation-delay: 200ms;
+    }
+    ul li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    ul li:nth-child(4){
+        animation-delay: 600ms;
+    }
+@keyframes navAnimation {
+    to{
+        transform: rotateX(0);
+        opacity: 1;
+    }
+    
+}
+    ul li a:hover{
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+    
+
+    
+}
+
+/*============================= Media Queries for Small Screen ==================================== */
+@media screen AND (max-width:600px) {
+    .container{
+        width: var(--container-width-sm);
+    }
+    nav ul{
+        position: absolute;
+        top: 80%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 3rem;
+        gap: 0;
+        width: 300px;
+       }
+    .show-nav{
+        display: flex;
+    }
+    .hide-nav{
+        display: none;
+    }
+    
+}

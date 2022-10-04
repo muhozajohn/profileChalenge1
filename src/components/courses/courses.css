@@ -1,0 +1,45 @@
+.courses_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+#Courses{
+    margin-top: 10rem;
+
+}
+.cards{
+    background: var(--color-bg1);
+    /* padding: 2rem; */
+}
+.cards-info{
+    margin: 1rem;
+    text-align: center;
+}
+.cards-info h3, p{
+    margin-bottom: 1.5rem;
+}
+
+/* ============== Quesries mediam Screem ============== */
+@media screen and (max-width:1120px) {
+    .container{
+        width: var(--width-container-md);
+    }
+
+    .courses_container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+}
+/* ============== Quesries small Screem ============== */
+@media screen and (max-width:600px) {
+    .container{
+        width: var(--width-container-sm);
+    }
+
+    .courses_container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+}

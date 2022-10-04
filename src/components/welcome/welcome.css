@@ -1,0 +1,55 @@
+.questions-container{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.questions{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 4rem rgba(0, 0, 0,0.3);
+}
+.qusetion{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    background: var(--color-bg2);
+    padding: 2rem;
+}
+.qusetion i{
+    align-self: flex-start;
+}
+.question-info h5{
+    margin-bottom: 1rem;
+}
+.question-info p{
+    display: none;
+}
+.question-info:hover p{
+    display: block;
+}
+
+/*============================= Media Queries for Mediam Screen =============================== */
+
+@media screen AND (max-width:1120px) {
+    .container{
+        width: var(--container-width-md);
+    }
+    .questions-container{
+        grid-template-columns: 1fr;
+    }
+    
+    
+}
+
+/*============================= Media Queries for Small Screen ==================================== */
+@media screen AND (max-width:600px) {
+    .questions-container{
+        grid-template-columns: 1fr;
+    }
+    .container{
+        width: var(--container-width-sm);
+    }
+
+    
+    
+}
+
